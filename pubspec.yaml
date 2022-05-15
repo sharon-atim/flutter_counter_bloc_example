@@ -12,12 +12,12 @@ dependencies:
     sdk: flutter
   bloc: ^8.0.2
   flutter_bloc: ^8.0.1
+  bloc_test: ^9.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints:
-  bloc_test: ^9.0.2
   mocktail: ^0.2.0
   integration_test:
     sdk: flutter

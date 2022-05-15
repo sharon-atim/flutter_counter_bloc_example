@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-// import '../counter.dart'; //TODO: Create file then uncomment
-// import 'counter_view.dart';//TODO: Create file then uncomment
+
+import '../cubit/counter_cubit.dart';
+import 'counter_view.dart';
 
 /// {@template counter_page}
 /// A [StatelessWidget] which is responsible for providing a
@@ -14,9 +15,11 @@ class CounterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Used as a DI widget so that a single instance of Bloc or Cubit
+    // can be provided to multiple widgets within a subtree.
     return BlocProvider(
-      create: (_) => CounterCubit(), //TODO: Create CounterCubit
-      child: CounterView(), //TODO: Add CounterView
+      create: (_) => CounterCubit(),
+      child: const CounterView(),
     );
   }
 }
