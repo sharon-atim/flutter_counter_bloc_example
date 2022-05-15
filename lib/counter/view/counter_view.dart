@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../counter.dart';
-import '../cubit/counter_cubit.dart'; 
+import '../cubit/counter_cubit.dart';
 
 /// {@template counter_view}
 /// A [StatelessWidget] which reacts to the provided
@@ -13,7 +13,6 @@ class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(title: const Text('Counter')),
       body: Center(
@@ -37,7 +36,7 @@ class CounterView extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
-            key: Key('counterView_decrement_floatingActionButton'),
+            key: const Key('counterView_decrement_floatingActionButton'),
             child: const Icon(Icons.remove),
             onPressed: () => context.read<CounterCubit>().decrement(),
           )

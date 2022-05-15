@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 /// {@template counter_observer}
 /// [BlocObserver] for the counter application which observes all state changes.
 /// {@endtemplate}
-///
+
+// BlocObserver implementation.
 class CounterObserver extends BlocObserver {
   @override
 
